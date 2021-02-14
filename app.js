@@ -90,7 +90,7 @@ const createSlider = () => {
   timer = setInterval(function () {
     slideIndex++;
     changeSlide(slideIndex);
-  }, Math.abs(duration));
+  }, Math.abs(duration)); //changed duration.
 }
 
 // change slider index 
@@ -127,7 +127,7 @@ searchBtn.addEventListener('click', function () {
   sliders.length = 0;
 })
 
-//for enter keyword 
+//for search button enter keyword 
 const search = document.getElementById('search');
 search.addEventListener("keyup", function (event) {
   if (event.key == 'Enter') {
@@ -136,11 +136,12 @@ search.addEventListener("keyup", function (event) {
   }
 });
 
+
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
 
-// spinner
+// spinner -- Extra Features
 const toggleSpinner = (show) => {
   const spinner = document.getElementById('spinner');
   if (show) {
@@ -151,7 +152,7 @@ const toggleSpinner = (show) => {
   }
 }
 
-//Catch Error Messages 
+//Catch Error Messages -- Extra Features
 const displayError = err => {
   const errorTag = document.getElementById('search-btn');
   errorTag.innerText = err;
