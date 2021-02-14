@@ -36,7 +36,8 @@ const getImages = (query) => {
   fetch(url)
     .then(response => response.json())
     .then(data => showImages(data.hits))
-    .catch(err => console.log(err))
+    // .catch(err => console.log(err))
+    .catch(err => displayError('Something Went Wrong'));
   toggleSpinner(true);
 }
 
@@ -148,4 +149,10 @@ const toggleSpinner = (show) => {
   else {
     spinner.classList.add('d-none');
   }
+}
+
+//Catch Error Messages 
+const displayError = err => {
+  const errorTag = document.getElementById('search-btn');
+  errorTag.innerText = err;
 }
