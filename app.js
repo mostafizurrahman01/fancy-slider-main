@@ -11,7 +11,7 @@ let sliders = [];
 // If this key doesn't work
 // Find the name in the url and go to their website
 // to create your own api key
-const KEY = '20265751-2c3edcad67499c269e2fd06b0';
+const KEY = '20265751-2c3edcad67499c269e2fd06b0'; //Key updated
 
 // show images 
 // const searchBtn = document.getElementById('search-btn');
