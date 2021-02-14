@@ -32,7 +32,7 @@ const showImages = (images) => {
 
 const getImages = (query) => {
   const search = document.getElementById('search').value;
-  const url = `https://pixabay.com/api/?key=${KEY}&q= "+ ${query} + " &image_type=photo&pretty=true`;
+  const url = `https://pixabay.com/api/?key=${KEY}&q= "+ ${query} + " &image_type=photo&pretty=true`; //changed and search button is ok.
   fetch(url)
     .then(response => response.json())
     .then(data => showImages(data.hits))
