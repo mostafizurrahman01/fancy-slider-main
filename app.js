@@ -51,6 +51,7 @@ const selectItem = (event, img) => {
     element.classList.add('added');
 
   } else {
+    //for removing images
     sliders.pop(img);
     element.classList.remove('added');
     element.classList.add('removed');
